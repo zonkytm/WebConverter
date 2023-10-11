@@ -17,21 +17,22 @@ public class CurrencyConvertHandler : ICurrencyConvertHandler
         var cbrData = _cbr.GetCurrencyData().Result;
         var currencyDictionary = cbrData.Valute;
         
-        var currencyToConvertValue = currencyDictionary
+        var currencyToConvertValue = currencyToConvert.Equals("RUB")? 1: currencyDictionary
             .Where(valute => valute.Key == currencyToConvert)
             .Select(valute => valute.Value.Value)
             .FirstOrDefault();
         
-        var targetCurrencyValue = currencyDictionary
+        var targetCurrencyValue =targetCurrency.Equals("RUB")? 1: currencyDictionary
             .Where(valute => valute.Key == targetCurrency)
             .Select(valute => valute.Value.Value)
             .FirstOrDefault();
-        if (currencyToConvert.Equals(0) || targetCurrency.Equals(0))
+        
+        if (currencyToConvertValue.Equals(0) || targetCurrencyValue.Equals(0))
         {
         }
 
-        decimal currencyRatio = targetCurrencyValue / currencyToConvertValue;
-        decimal convertResult = amount * currencyRatio;
+        decimal currencyRatio = currencyToConvertValue/targetCurrencyValue;
+        decimal convertResult = amount*currencyRatio;
         return Task.FromResult(convertResult);
     }
 }
