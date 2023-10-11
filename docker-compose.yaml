@@ -1,0 +1,8 @@
+services:
+  convert-currency-service:
+    build:
+      context: /
+      dockerfile: /src/Convert.Application.Host/Dockerfile
+    ports:
+      - "2123:80"
+

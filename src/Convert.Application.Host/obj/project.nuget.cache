@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "AJbQ6aj1fJIgpJsCfH1T9ioZQhm5IokoxdatE0VJEdKov4JOehaP4zsKIAccKVZnNk7t4ck5X/IpCS8vG39vuw==",
+  "dgSpecHash": "DsX9XLDXNrkz0Ec9O+ycj+0b0XkwoHxDt4JQBVb8LEjac4YeursUXOfwRlOiXAQpRYeOk7gN2OllUU3OMw81hw==",
   "success": true,
   "projectFilePath": "D:\\веб проекты\\WebProject\\src\\Convert.Application.Host\\Convert.Application.Host.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\juphy\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.4\\microsoft.visualstudio.azure.containers.tools.targets.1.19.4.nupkg.sha512"
+  ],
   "logs": []
 }
