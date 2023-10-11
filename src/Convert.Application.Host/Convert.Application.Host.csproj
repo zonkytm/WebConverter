@@ -11,6 +11,13 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.4" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Convert.Application.Api.Contracts\Convert.Application.Api.Contracts.csproj" />
+    <ProjectReference Include="..\Convert.Application.AppServices.Contracts\Convert.Application.AppServices.Contracts.csproj" />
+    <ProjectReference Include="..\Convert.Application.AppServices\Convert.Application.AppServices.csproj" />
   </ItemGroup>
 
 </Project>
