@@ -4,7 +4,7 @@ public class ConvertRequestModel
 {
     
     /// <summary>
-    /// Сумма которую нудно конвертировать.
+    /// Сумма которую нужно конвертировать.
     /// </summary>
     public decimal Amount { get; init; }
     

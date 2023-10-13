@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using Convert.Application.Api.Contracts.Requests;
 using Convert.Application.Api.Contracts.Responses;
 using Convert.Application.AppServices.Contracts.Handlers;
@@ -18,12 +19,12 @@ public class ConvertCurrencyController:Controller
     [HttpPost("/convert")]
     public Task<ConvertResponseModel> Convert([FromBody]ConvertRequestModel currencyToConvert)
     {
-        var convertedValue = _convertHandler.Handle(currencyToConvert.Amount, currencyToConvert.CurrencyToConvert,
-            currencyToConvert.TargetCurrency).Result;
+        var convertedValue = _convertHandler.Handle(currencyToConvert.Amount, currencyToConvert.CurrencyToConvert.ToUpper(),
+            currencyToConvert.TargetCurrency.ToUpper()).Result;
         
         var response = new ConvertResponseModel
         {
-            ConvertedAmount = convertedValue,
+            ConvertedAmount =convertedValue,
             ConvertedCurrency = currencyToConvert.TargetCurrency
         };
         return Task.FromResult(response);

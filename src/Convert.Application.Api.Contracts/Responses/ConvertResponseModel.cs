@@ -10,5 +10,5 @@ public class ConvertResponseModel
     /// <summary>
     /// Валюта после конвертации.
     /// </summary>
-    public string ConvertedCurrency { get; set; }
+    public string? ConvertedCurrency { get; set; }
 }

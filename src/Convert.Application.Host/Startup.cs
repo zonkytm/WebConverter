@@ -2,6 +2,12 @@ using Convert.Application.AppServices.Contracts;
 using Convert.Application.AppServices.Contracts.Handlers;
 using Convert.Application.AppServices.Contracts.HttpClient;
 using Convert.Application.AppServices.Handlers;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 
 namespace Convert.Application.Host;
